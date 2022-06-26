@@ -9,21 +9,21 @@ let score = 0;
 let questionCounter = 0;
 let availableQuesions = [];
 
-var counterContainer = document.querySelector(".website-counter");
-var resetButton = document.querySelector("#reset");
-var visitCount = localStorage.getItem("page_view");
+// var counterContainer = document.querySelector(".website-counter");
+// var resetButton = document.querySelector("#reset");
+// var visitCount = localStorage.getItem("page_view");
 
 // Check if page_view entry is present
-if (visitCount) {
-  visitCount = Number(visitCount) + 1;
-  localStorage.setItem("page_view", visitCount);
-} else {
-  visitCount = 1;
-  localStorage.setItem("page_view", 1);
-}
-counterContainer.innerHTML = visitCount;
+// if (visitCount) {
+//   visitCount = Number(visitCount) + 1;
+//   localStorage.setItem("page_view", visitCount);
+// } else {
+//   visitCount = 1;
+//   localStorage.setItem("page_view", 1);
+// }
+// counterContainer.innerHTML = visitCount;
 
-console.log("vistor count" + visitCount);
+// console.log("vistor count" + visitCount);
 
 
 
@@ -505,7 +505,7 @@ getNewQuestion = () => {
   if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
     localStorage.setItem("mostRecentScore", score);
     //go to the end page
-    return window.location.assign("/end.html");
+    return window.location.assign("end.html");
   }
   questionCounter++;
   progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
